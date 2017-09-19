@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Police Login</title>
+
+
+	<link rel="stylesheet" href="assets/demo.css">
+	<link rel="stylesheet" href="assets/form-validation.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    
+    <script type="text/javascript">
+   <!--
+      // Form validation code will come here.
+      function validate()
+      {
+      
+         if( document.myForm.name.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.myForm.name.focus() ;
+            return false;
+         }
+         if (document.myForm.name.value!="Mike Ross") 
+         {
+            alert("Incorrect Name");
+            document.myForm.name.focus();
+            return false;
+
+         }
+         
+         if( document.myForm.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         }
+         if (document.myForm.email.value!="mross@hulu.com") 
+         {
+            alert("Incorrect Email");
+            document.myForm.email.focus();
+            return false;
+
+         }
+         
+         if (document.myForm.Password.value!="mross123") 
+         {
+            alert("Incorrect Password");
+            document.myForm.Password.focus();
+            return false;
+
+         }
+         else
+         return( true );
+      }
+   //-->
+</script>
+
+</head>
+
+
+	<header>
+		<h1>Police Login</h1>
+        
+    </header>
+
+
+
+    <div class="main-content">
+
+        <!-- You only need this form and the form-validation.css -->
+
+        <form class="form-validation" name="myForm" onsubmit="return(validate());" method="get" action="form-vlud.html" >
+
+            <div class="form-title-row">
+                <h1>Form Validation</h1>
+            </div>
+
+            <div class="form-row form-input-name-row">
+
+                <label>
+                    <span>Full name</span>
+                    <input type="text" name="name">
+                </label>
+
+                <!--
+                    Add these three elements to every form row. They will be shown by the
+                    .form-valid-data and .form-invalid-data classes (see the JS for an example).
+                -->
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div>
+
+            <div class="form-row form-input-email-row">
+
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" value="email@example.com">
+                </label>
+
+                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
+
+                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
+                <span class="form-invalid-data-info"></span>
+
+            </div>
+
+            <div class="form-row">
+
+                <label>
+                    <span>Password</span>
+                    <input type="Password" name="Password">
+                </label>
+
+            </div>
+
+            
+
+            <div class="form-row">
+
+                <button type="submit">Submit Form</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

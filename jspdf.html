@@ -1,0 +1,57 @@
+<html>
+<<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Police Login</title>
+
+	<link rel="stylesheet" href="assets/demo.css">
+	<link rel="stylesheet" href="assets/form-validation.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.min.js"></script>
+    
+
+</head>
+<body>
+<div id="navbar"><span>jsPDF Tutorial - Form Filling</span></div>
+<div id="wrapper">
+
+		<input type="text" id="name" value=""/ placeholder="Name"><br>
+		<input type="text" id="company" value="" placeholder="Company" /><br>
+		<input type="text" id="department" value="" placeholder="Department" /><br>
+		<input type="text" id="title" value="" placeholder="Job Title"/><br>
+		<input type="button" id="button" value="Submit"/>
+	   <script>
+        $('#button').click(function() {
+        
+         var doc = new jsPDF();
+         
+         doc.addImage(imgData, 'JPEG',0,0,210,297);
+         
+        var name = $('#name').val();
+		var company = $('#company').val();
+		var department = $('#department').val();
+		var title = $('#title').val();
+		
+		doc.setFontSize(26);
+		doc.setTextColor(92, 76, 76);
+		
+		doc.text(23, 81, name);
+		doc.text(23, 122, company);
+		doc.text(23, 162, department);
+		doc.text(23, 202, title);
+		 doc.save('test.pdf');
+
+        
+        
+    
+
+    });
+    </script>
+   </body>
+   </html>
